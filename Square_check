@@ -1,0 +1,27 @@
+import java.util.*;
+
+class square {
+    public static void main(String[] args) {
+        Scanner sc  = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(check_square(num)==1) {
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+    }
+
+    public static int check_square(int num)
+    {
+        for (int i=1; i*i<=num; i++)
+        {
+            if((num%i==0) && (num/i==i))
+            {
+                return 1;
+            }
+        }
+        return num;
+
+    }
+}
